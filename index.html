@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Icons Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background: #222; color: #fff; padding: 1rem; text-align: center; }
+    main { padding: 2rem; }
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 1.5rem;
+    }
+    .icon-card {
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .icon-card svg,
+    .icon-card img {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 0.5rem;
+    }
+    .icon-name {
+      font-size: 0.9rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Custom Icons Gallery</h1>
+    <p>Browse and download your custom icons</p>
+  </header>
+  <main>
+    <section class="icon-grid">
+      <!-- Example icon card -->
+      <div class="icon-card">
+        <!-- Replace with your SVG or <img src="icon.png"> -->
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#333" stroke-width="2"/></svg>
+        <div class="icon-name">Example Icon</div>
+      </div>
+      <!-- Add more icon cards here -->
+    </section>
+  </main>
+</body>
+</html>

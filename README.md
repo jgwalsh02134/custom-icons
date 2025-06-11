@@ -6,7 +6,7 @@
 A repository for custom icon assets and related resources. Browse, preview, and use these icons for your projects.
 
 
-Custom Domain: iconsusa.org
+**CUSTOM DOMAIN:** [iconsusa.org](https://iconsusa.org)
 
 ---
 

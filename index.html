@@ -58,6 +58,20 @@
       font-size: 0.9rem;
       color: #333;
     }
+    .icon-links {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+    }
+    .icon-links a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .icon-links a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -298,5 +312,31 @@
       </div>
     </section>
   </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var cards = document.querySelectorAll('.icon-card');
+      cards.forEach(function(card) {
+        var img = card.querySelector('img');
+        if (!img) return;
+        var src = img.getAttribute('src');
+        if (!src) return;
+        if (card.querySelector('.icon-links')) return;
+        var links = document.createElement('div');
+        links.className = 'icon-links';
+        var openLink = document.createElement('a');
+        openLink.href = src;
+        openLink.target = '_blank';
+        openLink.rel = 'noopener';
+        openLink.textContent = 'Open';
+        var downloadLink = document.createElement('a');
+        downloadLink.href = src;
+        downloadLink.setAttribute('download', '');
+        downloadLink.textContent = 'Download';
+        links.appendChild(openLink);
+        links.appendChild(downloadLink);
+        card.appendChild(links);
+      });
+    });
+  </script>
 </body>
 </html>

@@ -1,1 +1,408 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,255.99185,255.99185" width="48px" height="48px" fill-rule="nonzero"><defs><linearGradient x1="3.879" y1="3.879" x2="20.121" y2="20.121" gradientUnits="userSpaceOnUse" id="color-1"><stop offset="0" stop-color="#5c7cfa"></stop><stop offset="1" stop-color="#ffffff" stop-opacity="0.30196"></stop></linearGradient><linearGradient x1="3.879" y1="3.879" x2="20.121" y2="20.121" gradientUnits="userSpaceOnUse" id="color-2"><stop offset="0" stop-color="#5c7cfa"></stop><stop offset="0.493" stop-color="#ffffff" stop-opacity="0"></stop><stop offset="0.997" stop-color="#ffffff" stop-opacity="0.30196"></stop></linearGradient><linearGradient x1="5.74" y1="7.69" x2="16.525" y2="18.475" gradientUnits="userSpaceOnUse" id="color-3"><stop offset="0" stop-color="#ffffff" stop-opacity="0.70196"></stop><stop offset="0.519" stop-color="#ffffff" stop-opacity="0.45098"></stop><stop offset="1" stop-color="#ffffff" stop-opacity="0.54902"></stop></linearGradient></defs><g transform="translate(-12.79959,-12.79959) scale(1.1,1.1)"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M18,21h-12c-1.657,0 -3,-1.343 -3,-3v-12c0,-1.657 1.343,-3 3,-3h12c1.657,0 3,1.343 3,3v12c0,1.657 -1.343,3 -3,3z" fill="url(#color-1)"></path><path d="M18,3.5c1.378,0 2.5,1.121 2.5,2.5v12c0,1.379 -1.122,2.5 -2.5,2.5h-12c-1.378,0 -2.5,-1.121 -2.5,-2.5v-12c0,-1.379 1.122,-2.5 2.5,-2.5h12M18,3h-12c-1.657,0 -3,1.343 -3,3v12c0,1.657 1.343,3 3,3h12c1.657,0 3,-1.343 3,-3v-12c0,-1.657 -1.343,-3 -3,-3z" fill="url(#color-2)"></path><path d="M9,17h-2.523v-7h2.523zM7.694,8.717c-0.771,0 -1.286,-0.514 -1.286,-1.2c0,-0.686 0.514,-1.2 1.371,-1.2c0.771,0 1.286,0.514 1.286,1.2c0,0.686 -0.514,1.2 -1.371,1.2zM18,17h-2.442v-3.826c0,-1.058 -0.651,-1.302 -0.895,-1.302c-0.244,0 -1.058,0.163 -1.058,1.302c0,0.163 0,3.826 0,3.826h-2.523v-7h2.523v0.977c0.325,-0.57 0.976,-0.977 2.197,-0.977c1.221,0 2.198,0.977 2.198,3.174z" fill="url(#color-3)"></path></g></g></g></svg>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Psyber Nexus — Style Guide</title>
+
+<!-- Favicon / App Icon -->
+<link rel="icon" href="https://iconsusa.org/assets/icons_copy/psyber-nexus-1.svg" type="image/svg+xml">
+<link rel="mask-icon" href="https://iconsusa.org/assets/icons_copy/psyber-nexus-1.svg" color="#008080">
+<meta name="theme-color" content="#008080" />
+
+<!-- Fonts: Display = Chicago-inspired (self-host “ChicagoFLF” if licensed), Body = IBM Plex Mono -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================
+   Psyber Nexus — Tokens, Base, Components, Examples
+   Core vibe: retro-tech + clinical clarity + soft aura/glow
+   ========================================================= */
+
+/* ---------- TOKENS ---------- */
+:root{
+  /* Colors (HSL triplets for flexible alpha) */
+  --pn-teal: 180 100% 25%;        /* #008080 anchor */
+  --pn-teal-400: 173 72% 42%;     /* accent for glow/CTA */
+  --pn-blue: 204 76% 56%;         /* cool blue accent */
+  --pn-navy-900: 216 38% 7%;      /* deep background */
+  --pn-ink-800: 222 28% 9%;
+  --pn-white: 0 0% 100%;
+  --pn-slate-100: 210 36% 96%;
+  --pn-slate-300: 214 32% 86%;
+  --pn-slate-600: 215 19% 35%;
+  --pn-keyline: 210 20% 20%;
+  --pn-warn: 38 92% 50%;          /* small alerts only */
+  --pn-danger: 0 72% 52%;
+
+  /* Typography */
+  --pn-font-display: "ChicagoFLF","Chicago",ui-sans-serif,system-ui,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --pn-font-body: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+
+  /* Type scale & spacing */
+  --pn-1: 0.75rem;  /* 12 */
+  --pn-2: 0.875rem; /* 14 */
+  --pn-3: 1rem;     /* 16 */
+  --pn-4: 1.25rem;  /* 20 */
+  --pn-5: 1.75rem;  /* 28 */
+  --pn-6: 2.25rem;  /* 36 */
+
+  --sp-1: 0.25rem; --sp-2: 0.5rem; --sp-3: 0.75rem; --sp-4: 1rem;
+  --sp-5: 1.5rem; --sp-6: 2rem; --sp-8: 3rem;
+
+  /* Corners, Depth, Motion */
+  --radius-1: 6px; --radius-2: 8px; --radius-3: 12px;
+  --shadow-1: 0 1px 0 hsl(var(--pn-white)/0.04), 0 8px 20px -12px hsl(var(--pn-ink-800)/0.6);
+  --shadow-soft: 0 0 0 1px hsl(var(--pn-keyline)), 0 12px 40px -16px hsl(var(--pn-teal-400)/0.18);
+  --focus: 0 0 0 3px hsl(var(--pn-teal-400)/0.45);
+
+  --dur-q: 150ms; --dur-s: 200ms; --dur-l: 250ms;
+  --ease: cubic-bezier(0.2,0,0,1);
+  --ease-emph: cubic-bezier(0.16,1,0.3,1);
+}
+
+/* Light scheme support (optional) */
+@media (prefers-color-scheme: light){
+  :root{
+    --pn-navy-900: 0 0% 100%;
+    --pn-ink-800: 210 30% 3%;
+    --pn-keyline: 210 16% 86%;
+    --shadow-1: 0 1px 0 hsl(var(--pn-ink-800)/0.08), 0 8px 20px -12px hsl(var(--pn-ink-800)/0.12);
+  }
+}
+
+/* ---------- BASE ---------- */
+*{ box-sizing: border-box; }
+html, body{ height:100%; }
+body{
+  margin:0;
+  color:hsl(var(--pn-slate-100));
+  background: linear-gradient(180deg, hsl(var(--pn-navy-900)), hsl(var(--pn-ink-800)));
+  font-family: var(--pn-font-body);
+  font-size: var(--pn-3);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a{ color:hsl(var(--pn-blue)); text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+h1,h2,h3{
+  font-family: var(--pn-font-display);
+  color: hsl(var(--pn-slate-100));
+  margin: 0 0 var(--sp-4);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+h1{ font-size: clamp(2rem, 4vw, 3rem); }
+h2{ font-size: clamp(1.5rem, 3vw, 2.25rem); }
+h3{ font-size: clamp(1.125rem, 2.4vw, 1.5rem); }
+p{ color:hsl(var(--pn-slate-300)); margin:0 0 var(--sp-4); }
+
+/* Ultra subtle lab grid + aura */
+.lab-bg{ position:relative; }
+.lab-bg::before{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(1200px 600px at 25% -10%, hsl(var(--pn-teal)/0.15), transparent 40%),
+    linear-gradient(transparent 31px, hsl(var(--pn-white)/0.02) 32px),
+    linear-gradient(90deg, transparent 31px, hsl(var(--pn-white)/0.02) 32px);
+  background-size: auto, 32px 32px, 32px 32px;
+  mix-blend-mode: screen; opacity: 0.25;
+}
+
+/* Container */
+.container{ max-width: 1100px; margin: 0 auto; padding: 0 var(--sp-4) var(--sp-8); }
+
+/* ---------- UTILITIES ---------- */
+.muted{ color:hsl(var(--pn-slate-600)); }
+.keyline{ border:1px solid hsl(var(--pn-keyline)); border-radius: var(--radius-1); }
+.round{ border-radius: var(--radius-1); }
+.round-lg{ border-radius: var(--radius-2); }
+.shadow{ box-shadow: var(--shadow-1); }
+.softglow{ box-shadow: var(--shadow-soft); }
+.kicker{ font-size: var(--pn-2); letter-spacing: 0.12em; text-transform: uppercase; color:hsl(var(--pn-slate-600)); }
+.grid{ display:grid; gap: var(--sp-4); }
+
+/* Aura hover */
+.aura{ position:relative; border-radius: var(--radius-2); }
+.aura::after{
+  content:""; position:absolute; inset:-8px; border-radius: inherit;
+  box-shadow: 0 0 24px 0 hsl(var(--pn-teal-400)/0.35);
+  opacity:0; transition: opacity var(--dur-s) var(--ease);
+  pointer-events:none;
+}
+.aura:hover::after, .aura:focus-within::after{ opacity:1; }
+
+/* ---------- COMPONENTS ---------- */
+
+/* Header/Hero */
+header{ text-align:center; padding: var(--sp-8) var(--sp-4) var(--sp-6); position:relative; }
+.hero-logo{
+  width: 96px; height: 96px; display:block; margin: 0 auto var(--sp-3);
+  filter: drop-shadow(0 6px 24px hsl(var(--pn-teal-400)/0.25));
+}
+.hero h1 span{ color:hsl(var(--pn-teal-400)); }
+.cta-row{ display:flex; flex-wrap:wrap; gap:var(--sp-3); justify-content:center; margin-top: var(--sp-4); }
+
+/* Window (classic Mac/NeXT cues) */
+.window{
+  background:hsl(220 29% 12%);
+  border:1px solid hsl(var(--pn-keyline));
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-1);
+  overflow:hidden;
+}
+.titlebar{
+  display:flex; align-items:center; gap:var(--sp-3);
+  padding: var(--sp-2) var(--sp-3);
+  background: linear-gradient(180deg, hsl(var(--pn-white)/0.06), hsl(var(--pn-white)/0));
+  border-bottom:1px solid hsl(var(--pn-keyline));
+}
+.traffic{ display:inline-flex; gap:6px; margin-right: var(--sp-1); }
+.dot{
+  width:10px; height:10px; border-radius:50%;
+  box-shadow: inset 0 1px 0 hsl(var(--pn-white)/0.35), 0 0 0 1px hsl(210 30% 3% / 0.5);
+}
+.dot--close{ background:hsl(var(--pn-danger)); }
+.dot--min{ background:hsl(var(--pn-warn)); }
+.dot--max{ background:hsl(var(--pn-teal-400)); }
+.title{ font-family: var(--pn-font-display); font-size: var(--pn-2); letter-spacing: 0.01em; }
+.content{ padding: var(--sp-4); }
+
+/* Cards */
+.card{
+  background:hsl(220 24% 16%);
+  border:1px solid hsl(var(--pn-keyline));
+  border-radius: var(--radius-1);
+  padding: var(--sp-4);
+  box-shadow: var(--shadow-1);
+}
+
+/* Buttons */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:0.5ch;
+  height:40px; padding:0 var(--sp-4);
+  font-family: var(--pn-font-body); font-size: var(--pn-2); font-weight:600;
+  border-radius: var(--radius-1); border:1px solid transparent; cursor:pointer;
+  transition: transform var(--dur-q) var(--ease), box-shadow var(--dur-q) var(--ease), background var(--dur-q) var(--ease);
+}
+.btn:focus-visible{ outline:none; box-shadow: var(--focus); }
+.btn.primary{
+  background: linear-gradient(180deg, hsl(var(--pn-teal-400)), hsl(var(--pn-teal)/0.9));
+  color:hsl(var(--pn-white));
+  border-color:hsl(var(--pn-teal-400)/0.6);
+}
+.btn.primary:hover{ transform: translateY(-1px); box-shadow: var(--shadow-soft); }
+.btn.ghost{
+  background: transparent; color:hsl(var(--pn-slate-100));
+  border-color:hsl(var(--pn-keyline));
+}
+.btn.ghost:hover{ background:hsl(var(--pn-white)/0.04); }
+.btn.subtle{
+  background: hsl(var(--pn-white)/0.03); color:hsl(var(--pn-slate-100));
+  border-color:hsl(var(--pn-keyline));
+}
+
+/* Badges */
+.badge{
+  display:inline-flex; align-items:center; gap:0.5ch;
+  height:24px; padding:0 var(--sp-2);
+  border-radius: var(--radius-1);
+  border:1px solid hsl(var(--pn-keyline));
+  font-size: var(--pn-1); color:hsl(var(--pn-slate-100));
+  background:hsl(var(--pn-white)/0.03);
+}
+.badge.ok{ color:hsl(var(--pn-teal-400)); border-color:hsl(var(--pn-teal-400)/0.6); }
+.badge.warn{ color:hsl(var(--pn-warn)); border-color:hsl(var(--pn-warn)/0.6); }
+.badge.err{ color:hsl(var(--pn-danger)); border-color:hsl(var(--pn-danger)/0.6); }
+
+/* Swatches */
+.swatch{
+  height: 64px; border-radius: var(--radius-1);
+  border:1px solid hsl(var(--pn-keyline));
+}
+
+/* Accessibility helpers */
+.sr-only{
+  position:absolute !important; height:1px; width:1px;
+  overflow:hidden; clip: rect(1px,1px,1px,1px); white-space:nowrap;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *{ animation:none !important; transition:none !important; }
+}
+</style>
+</head>
+
+<body class="lab-bg">
+<a href="#main" class="sr-only">Skip to content</a>
+
+<header class="hero container">
+  <img class="hero-logo" src="https://iconsusa.org/assets/icons_copy/psyber-nexus-1.svg" alt="Psyber Nexus mark: Psi over globe grid">
+  <div class="kicker">Style & Aesthetic</div>
+  <h1>Where <span>Minds</span> Meet Machines</h1>
+  <p class="muted">Retro-tech discipline, clinical clarity, soft aura. This page demonstrates tokens, components, and usage patterns for Psyber Nexus.</p>
+  <div class="cta-row">
+    <a class="btn primary aura" href="#tokens">View Tokens</a>
+    <a class="btn ghost" href="#components">Components</a>
+    <a class="btn subtle" href="#usage">Usage Notes</a>
+  </div>
+</header>
+
+<main id="main" class="container" style="display:grid; gap: var(--sp-6);">
+
+  <!-- TOKENS -->
+  <section id="tokens" class="window aura">
+    <div class="titlebar">
+      <div class="traffic"><span class="dot dot--close"></span><span class="dot dot--min"></span><span class="dot dot--max"></span></div>
+      <div class="title">Design Tokens</div>
+    </div>
+    <div class="content">
+      <h2>Color System</h2>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(180px,1fr));">
+        <div>
+          <div class="swatch" style="background:hsl(var(--pn-teal));"></div>
+          <p><strong>Teal</strong> — #008080</p>
+        </div>
+        <div>
+          <div class="swatch" style="background:hsl(var(--pn-teal-400));"></div>
+          <p><strong>Teal 400</strong> — accent/glow</p>
+        </div>
+        <div>
+          <div class="swatch" style="background:hsl(var(--pn-blue));"></div>
+          <p><strong>Cool Blue</strong></p>
+        </div>
+        <div>
+          <div class="swatch" style="background:hsl(var(--pn-navy-900));"></div>
+          <p><strong>Navy/Black</strong> — deep bg</p>
+        </div>
+        <div>
+          <div class="swatch" style="background:hsl(var(--pn-slate-600));"></div>
+          <p><strong>Slate</strong> — copy/support</p>
+        </div>
+        <div>
+          <div class="swatch" style="background:hsl(var(--pn-warn));"></div>
+          <p><strong>Amber</strong> — alerts only</p>
+        </div>
+      </div>
+
+      <h2>Typography</h2>
+      <p class="muted">Headings use a Chicago-inspired display face (self-host “ChicagoFLF” if licensed). Body uses IBM Plex Mono.</p>
+      <div class="keyline round" style="padding: var(--sp-4); display:grid; gap: var(--sp-2);">
+        <h1>H1 — Psyber Nexus Display</h1>
+        <h2>H2 — Lab Interface Heading</h2>
+        <h3>H3 — Card/Panel Title</h3>
+        <p>Body — IBM Plex Mono. Precise, clinical, calm. Lead with outcomes. Keep contrast high; glow is measured, never neon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPONENTS -->
+  <section id="components" class="window aura">
+    <div class="titlebar">
+      <div class="traffic"><span class="dot dot--close"></span><span class="dot dot--min"></span><span class="dot dot--max"></span></div>
+      <div class="title">Components</div>
+    </div>
+    <div class="content">
+      <h2>Buttons</h2>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); align-items:start;">
+        <div class="keyline round" style="padding: var(--sp-4); display:flex; gap: var(--sp-3); flex-wrap:wrap;">
+          <button class="btn primary aura">Primary</button>
+          <button class="btn ghost">Ghost</button>
+          <button class="btn subtle">Subtle</button>
+          <span class="badge ok">OK</span>
+          <span class="badge warn">Warn</span>
+          <span class="badge err">Error</span>
+        </div>
+        <div class="muted">
+          Use 150–200ms transitions; small hover lift on primary; respect reduced-motion. Keep border radii subtle (6–8px).
+        </div>
+      </div>
+
+      <h2 style="margin-top: var(--sp-6);">Window & Cards</h2>
+      <div class="window" style="margin-bottom: var(--sp-4);">
+        <div class="titlebar">
+          <div class="traffic"><span class="dot dot--close"></span><span class="dot dot--min"></span><span class="dot dot--max"></span></div>
+          <div class="title">Psyber Nexus — Console</div>
+        </div>
+        <div class="content">
+          <div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(260px,1fr));">
+            <article class="card">
+              <h3>Human Risk Graph</h3>
+              <p class="muted">Privacy-preserving signals across identity, email, endpoint.</p>
+              <span class="badge ok">Live</span>
+            </article>
+            <article class="card">
+              <h3>Adaptive Phish Defense</h3>
+              <p class="muted">Simulations tuned to attention and cognitive load; no shaming.</p>
+              <span class="badge warn">Pilot</span>
+            </article>
+            <article class="card">
+              <h3>Culture Pulse</h3>
+              <p class="muted">Light, repeated measures of norms, friction, confidence.</p>
+              <span class="badge ok">Live</span>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <h2>Iconography & Imagery</h2>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(220px,1fr));">
+        <div class="keyline round" style="padding: var(--sp-4); text-align:center;">
+          <img src="https://iconsusa.org/assets/icons_copy/psyber-nexus-1.svg" alt="Psyber Nexus mark" style="width:80px;height:80px; display:block; margin:0 auto var(--sp-3);">
+          <p class="muted">Signature mark: Ψ with glassy blue gradient over globe grid. Centered, symmetrical, measured aura.</p>
+        </div>
+        <div class="keyline round" style="padding: var(--sp-4);">
+          <p class="muted">Icons: thin-stroke, geometric, psychology + infosec themes (brain, nodes, shields, networks). Avoid skeuomorphism and gamer neon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USAGE / ACCESSIBILITY -->
+  <section id="usage" class="window aura">
+    <div class="titlebar">
+      <div class="traffic"><span class="dot dot--close"></span><span class="dot dot--min"></span><span class="dot dot--max"></span></div>
+      <div class="title">Usage & Accessibility Notes</div>
+    </div>
+    <div class="content">
+      <div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(260px,1fr));">
+        <div class="card">
+          <h3>Do</h3>
+          <ul class="muted" style="margin:0; padding-left:1.1rem;">
+            <li>Keep contrast high on dark and light.</li>
+            <li>Use soft aura (≤35% opacity), never neon.</li>
+            <li>150–250ms micro-interactions; reduce on request.</li>
+            <li>Disciplined spacing; ISO-like icon proportions.</li>
+            <li>Typesetting grid-true; tight heading stacks.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Don’t</h3>
+          <ul class="muted" style="margin:0; padding-left:1.1rem;">
+            <li>No flashy rainbow gradients or heavy shadows.</li>
+            <li>No novelty fonts or gamer neon.</li>
+            <li>No dark patterns; respect autonomy and consent.</li>
+            <li>No noisy glitch or cliché “green code rain”.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Accessibility</h3>
+          <p class="muted">Respect <code>prefers-reduced-motion</code>. Maintain AA contrast for text on both schemes. Provide alt text for marks and diagrams. Ensure focus styles are visible (teal ring).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="container" style="text-align:center; color:hsl(var(--pn-slate-600)); padding-top: var(--sp-6);">
+  <small>&copy; Psyber Nexus — a lab interface for minds and machines</small>
+</footer>
+
+</body>
+</html>

@@ -4,194 +4,233 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Custom Icons</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      padding: 2rem;
-    }
-    .icons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-    .icons img {
-      width: 100px;
-      height: auto;
-      display: block;
-    }
-    /* Icon item container style */
-    .icon-item {
-      text-align: center;
-      width: 120px;
-    }
-    .icon-item a {
-      display: block;
-      margin-top: 0.5rem;
-      color: #0066cc;
-      text-decoration: none;
-    }
-    .icon-item a:hover {
-      text-decoration: underline;
-    }
-    /* Navigation Styles */
-    nav {
-      background-color: #333;
-      padding: 1rem;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 1rem;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/site.js" defer></script>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="my-site.html">Gallery</a></li>
-      <li><a href="web-dev-images.html">Web Dev Images</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <h1>Custom Icon Gallery</h1>
-  <div class="icons">
-    <div class="icon-item">
-      <img src="assets/icons_copy/bu.svg" alt="BU">
-      <a href="assets/icons_copy/bu.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/bu.svg" download>Download</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <a href="index.html">Custom Icons</a>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav class="navbar" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="web-dev-images.html">Web Dev Images</a></li>
+          <li><a href="professional-icons.html">Professional Icons</a></li>
+          <li><a href="my-site.html" aria-current="page">My-Site</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/bu-logo.svg" alt="BU Logo">
-      <a href="assets/icons_copy/bu-logo.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/bu-logo.svg" download>Download</a>
+  </header>
+  <main id="main" class="container section">
+    <h1>Custom Icon Gallery</h1>
+    <div class="icon-grid">
+    <div class="icon-card">
+      <img src="assets/icons_copy/bu.svg" alt="BU" loading="lazy">
+      <div class="icon-name">BU</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/bu.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/bu.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/icons8-usa.svg" alt="USA">
-      <a href="assets/icons_copy/icons8-usa.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/icons8-usa.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/bu-logo.svg" alt="BU Logo" loading="lazy">
+      <div class="icon-name">BU Logo</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/bu-logo.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/bu-logo.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/SIENa-S.svg" alt="SIENa-S">
-      <a href="assets/icons_copy/SIENa-S.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/SIENa-S.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/icons8-usa.svg" alt="USA" loading="lazy">
+      <div class="icon-name">USA</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/icons8-usa.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/icons8-usa.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/usajobs.svg" alt="USA Jobs">
-      <a href="assets/icons_copy/usajobs.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/usajobs.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/SIENa-S.svg" alt="SIENa-S" loading="lazy">
+      <div class="icon-name">SIENa-S</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/SIENa-S.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/SIENa-S.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/verified-badge.svg" alt="Verified Badge">
-      <a href="assets/icons_copy/verified-badge.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/verified-badge.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/usajobs.svg" alt="USA Jobs" loading="lazy">
+      <div class="icon-name">USA Jobs</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/usajobs.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/usajobs.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/academia-2.svg" alt="Academia Icon (Version 2)">
-      <a href="assets/icons_copy/academia-2.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/academia-2.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/verified-badge.svg" alt="Verified Badge" loading="lazy">
+      <div class="icon-name">Verified Badge</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/verified-badge.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/verified-badge.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/linkedin.svg" alt="LinkedIn Icon">
-      <a href="assets/icons_copy/linkedin.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/linkedin.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/academia-2.svg" alt="Academia Icon (Version 2)" loading="lazy">
+      <div class="icon-name">Academia (v2)</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/academia-2.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/academia-2.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/orcid.svg" alt="ORCID Icon">
-      <a href="assets/icons_copy/orcid.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/orcid.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/linkedin.svg" alt="LinkedIn Icon" loading="lazy">
+      <div class="icon-name">LinkedIn</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/linkedin.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/linkedin.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/harvard.svg" alt="Harvard Icon">
-      <a href="assets/icons_copy/harvard.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/harvard.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/orcid.svg" alt="ORCID Icon" loading="lazy">
+      <div class="icon-name">ORCID</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/orcid.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/orcid.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/researchgate.svg" alt="ResearchGate Icon">
-      <a href="assets/icons_copy/researchgate.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/researchgate.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/harvard.svg" alt="Harvard Icon" loading="lazy">
+      <div class="icon-name">Harvard</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/harvard.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/harvard.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/github-2.svg" alt="GitHub Icon (Version 2)">
-      <a href="assets/icons_copy/github-2.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/github-2.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/researchgate.svg" alt="ResearchGate Icon" loading="lazy">
+      <div class="icon-name">ResearchGate</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/researchgate.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/researchgate.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item" style="background-color: #eee;">
-      <img src="assets/icons_copy/boston-university-logo.svg" alt="Boston University Logo">
-      <a href="assets/icons_copy/boston-university-logo.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/boston-university-logo.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/github-2.svg" alt="GitHub Icon (Version 2)" loading="lazy">
+      <div class="icon-name">GitHub (v2)</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/github-2.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/github-2.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/gate-research.svg" alt="Gate Research Icon">
-      <a href="assets/icons_copy/gate-research.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/gate-research.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/boston-university-logo.svg" alt="Boston University Logo" loading="lazy">
+      <div class="icon-name">Boston University Logo</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/boston-university-logo.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/boston-university-logo.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/boston-icon.svg" alt="Boston Icon">
-      <a href="assets/icons_copy/boston-icon.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/boston-icon.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/gate-research.svg" alt="Gate Research Icon" loading="lazy">
+      <div class="icon-name">Gate Research</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/gate-research.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/gate-research.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/bu-33.svg" alt="BU-33 Icon">
-      <a href="assets/icons_copy/bu-33.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/bu-33.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/boston-icon.svg" alt="Boston Icon" loading="lazy">
+      <div class="icon-name">Boston Icon</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/boston-icon.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/boston-icon.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/redbubbledesign-2.svg" alt="Redbubble Design Icon (Version 2)">
-      <a href="assets/icons_copy/redbubbledesign-2.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/redbubbledesign-2.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/bu-33.svg" alt="BU-33 Icon" loading="lazy">
+      <div class="icon-name">BU-33</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/bu-33.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/bu-33.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/74232582.png" alt="74232582">
-      <a href="assets/icons_copy/74232582.png" target="_blank">Open</a>
-      <a href="assets/icons_copy/74232582.png" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/redbubbledesign-2.svg" alt="Redbubble Design Icon (Version 2)" loading="lazy">
+      <div class="icon-name">Redbubble Design (v2)</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/redbubbledesign-2.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/redbubbledesign-2.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/GitHub_Logo.png" alt="GitHub Logo">
-      <a href="assets/icons_copy/GitHub_Logo.png" target="_blank">Open</a>
-      <a href="assets/icons_copy/GitHub_Logo.png" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/74232582.png" alt="74232582" loading="lazy">
+      <div class="icon-name">74232582</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/74232582.png" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/74232582.png" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/vdata.svg" alt="vdata">
-      <a href="assets/icons_copy/vdata.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/vdata.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/GitHub_Logo.png" alt="GitHub Logo" loading="lazy">
+      <div class="icon-name">GitHub Logo</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/GitHub_Logo.png" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/GitHub_Logo.png" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/adsell.svg" alt="adsell">
-      <a href="assets/icons_copy/adsell.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/adsell.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/vdata.svg" alt="vdata" loading="lazy">
+      <div class="icon-name">vdata</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/vdata.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/vdata.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/notes-icon.svg" alt="Notes Icon">
-      <a href="assets/icons_copy/notes-icon.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/notes-icon.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/adsell.svg" alt="adsell" loading="lazy">
+      <div class="icon-name">adsell</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/adsell.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/adsell.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/github-text-logo.svg" alt="GitHub Text Logo">
-      <a href="assets/icons_copy/github-text-logo.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/github-text-logo.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/notes-icon.svg" alt="Notes Icon" loading="lazy">
+      <div class="icon-name">Notes Icon</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/notes-icon.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/notes-icon.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/icons8-cloudflare.svg" alt="Cloudflare Icon">
-      <a href="assets/icons_copy/icons8-cloudflare.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/icons8-cloudflare.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/github-text-logo.svg" alt="GitHub Text Logo" loading="lazy">
+      <div class="icon-name">GitHub Text Logo</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/github-text-logo.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/github-text-logo.svg" download>Download</a>
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="assets/icons_copy/icons8-linkedin.svg" alt="LinkedIn Icon (icons8)">
-      <a href="assets/icons_copy/icons8-linkedin.svg" target="_blank">Open</a>
-      <a href="assets/icons_copy/icons8-linkedin.svg" download>Download</a>
+    <div class="icon-card">
+      <img src="assets/icons_copy/icons8-cloudflare.svg" alt="Cloudflare Icon" loading="lazy">
+      <div class="icon-name">Cloudflare Icon</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/icons8-cloudflare.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/icons8-cloudflare.svg" download>Download</a>
+      </div>
+    </div>
+    <div class="icon-card">
+      <img src="assets/icons_copy/icons8-linkedin.svg" alt="LinkedIn Icon (icons8)" loading="lazy">
+      <div class="icon-name">LinkedIn (icons8)</div>
+      <div class="icon-links">
+        <a href="assets/icons_copy/icons8-linkedin.svg" target="_blank" rel="noopener">Open</a>
+        <a href="assets/icons_copy/icons8-linkedin.svg" download>Download</a>
+      </div>
     </div>
   </div>
+  </main>
 </body>
 </html>
